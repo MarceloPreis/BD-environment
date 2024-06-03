@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  mongodb1:
+    image: mongo
+    container_name: mongodb1
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  mongodb2:
+    image: mongo
+    container_name: mongodb2
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  mongodb3:
+    image: mongo
+    container_name: mongodb3
+    ports:
+      - "27019:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
